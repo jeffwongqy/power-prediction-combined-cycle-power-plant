@@ -68,4 +68,7 @@ Future iterations of this project can expand predictive performance by incorpora
 This micro-project successfully established a robust end-to-end machine learning regression pipeline to predict the Hourly Net Electrical Energy Output ($PE$) of a Combined Cycle Power Plant. Rigorous preprocessing—including duplicate handling and Interquartile Range (IQR) filtering—effectively stabilized feature variance by removing atmospheric anomalies. Statistical evaluation via Pearson correlation confirmed that Ambient Temperature ($AT$) and Exhaust Vacuum ($V$) exert dominant negative linear constraints on energy production, while Ambient Pressure ($AP$) and Relative Humidity ($RH$) exhibit positive linear trends. Among the optimized models, the non-parametric Decision Tree Regressor achieved the highest predictive performance, yielding an $R^2$ of $0.9490$ and a sharply minimized Mean Absolute Error (MAE) of $2.6597$. This outperformance over regularized linear models (Ridge, Lasso, and Elastic Net) highlights the presence of complex, non-linear thermodynamic interactions between environmental inputs and plant efficiency.
 
 ## 20. References
+[1] Rao, S. U. M., Kumar, A. V. S. P., Neelima, S., Krishna, C. V. M., & Lakshmanarao, A. (2024). Power Prediction in Combined Cycle Power Plant through ML and DL Regression Techniques. 2024 International Conference on Cognitive Robotics and Intelligent Systems (ICC - ROBINS), 58–62. https://doi.org/10.1109/icc-robins60238.2024.10533904
+
+‌
 
