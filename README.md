@@ -38,4 +38,10 @@ This micro-project leverages data-driven predictive modeling to address this cha
 
 <img width="1231" height="1231" alt="pairplot" src="https://github.com/user-attachments/assets/582473ea-4bc5-4d58-adaf-e421f5ac4c26" />
 
+## 5. Data Splitting
+The dataset is partitioned by isolating the target variable ($PE$) from the environmental features ($AT$, $V$, $AP$, $RH$). Using train_test_split, the data is divided into an $80\%$ training set to fit the models and a $20\%$ testing holdout set, ensuring a clean, unbiased evaluation of generalization performance.
+
+## 6. Data Scaling
+Because the features operate on entirely different physical scales (e.g., Temperature vs. Ambient Pressure around $1000+$ mbar), StandardScaler is applied. It normalizes features to a mean of $0$ and a standard deviation of $1$, preventing scale-dominant features from distorting regularized regressions and optimizing neural network gradient descent.
+
 
