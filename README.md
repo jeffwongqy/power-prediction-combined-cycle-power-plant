@@ -47,7 +47,7 @@ Because the features operate on entirely different physical scales (e.g., Temper
 ## 7. Model Comparison 
 Models undergo automated hyperparameter grid search with 5-fold cross-validation to maximize negative MSE. Optimized estimators are then tested on a holdout split. Performance is rigorously benchmarked using $R^2$, MAE, MSE, and RMSE metrics, and the results are visualized via comparative bar plots to identify the most accurate architecture.
 
-<img width="972" height="240" alt="Screenshot 2026-06-10 213725" src="https://github.com/user-attachments/assets/01b75343-8903-4a2e-9c78-54ec34f0fe89" />
+<img width="1007" height="280" alt="Screenshot 2026-06-10 215257" src="https://github.com/user-attachments/assets/9d8eb87f-2330-4ca8-8e3d-bc8ee138adb7" />
 
 <img width="846" height="557" alt="r2" src="https://github.com/user-attachments/assets/e4652ce8-f2ec-4044-8321-707c442b5e1f" />
 
