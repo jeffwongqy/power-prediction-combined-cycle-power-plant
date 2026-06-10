@@ -28,5 +28,14 @@ This micro-project leverages data-driven predictive modeling to address this cha
 
 
 
-### 4.2 Linear Association 
+### 4.2 Feature Association via Pearson Correlation and P-Values
+
+<img width="552" height="82" alt="pearson_correlation" src="https://github.com/user-attachments/assets/0676490d-c6f1-4a1e-aae7-20005faaf24f" />
+
+- The results reveal that $AT$ ($r = -0.9459$) and $V$ ($r = -0.8667$) share an extremely strong negative linear relationship with energy output, meaning power production drops sharply as temperature and vacuum levels rise. Conversely, $AP$ ($r = 0.5229$) and $RH$ ($r = 0.3868$) display moderate positive linear associations.
+- P-values: Testing against the null hypothesis ($H_0$: no linear correlation exists), all features yield a p-value of $0.0000$ ($\alpha < 0.05$). This confirms that these observed linear relationships are highly statistically significant and completely non-random.
+- Pairplot visually solidifies the strong linear paths discovered during the Pearson calculations, proving that the dataset is highly structured and well-suited for linear, ensemble, and neural network regression modeling.
+
+<img width="1231" height="1231" alt="pairplot" src="https://github.com/user-attachments/assets/582473ea-4bc5-4d58-adaf-e421f5ac4c26" />
+
 
