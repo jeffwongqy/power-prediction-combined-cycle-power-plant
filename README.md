@@ -44,7 +44,9 @@ The dataset is partitioned by isolating the target variable ($PE$) from the envi
 ## 6. Data Scaling
 Because the features operate on entirely different physical scales (e.g., Temperature vs. Ambient Pressure around $1000+$ mbar), StandardScaler is applied. It normalizes features to a mean of $0$ and a standard deviation of $1$, preventing scale-dominant features from distorting regularized regressions and optimizing neural network gradient descent.
 
-## Model Comparison 
+## 7. Model Comparison 
+Models undergo automated hyperparameter grid search with 5-fold cross-validation to maximize negative MSE. Optimized estimators are then tested on a holdout split. Performance is rigorously benchmarked using $R^2$, MAE, MSE, and RMSE metrics, and the results are visualized via comparative bar plots to identify the most accurate architecture.
+
 <img width="972" height="240" alt="Screenshot 2026-06-10 213725" src="https://github.com/user-attachments/assets/001333ff-a604-4d17-b301-b13b93ad78d9" />
 
 <img width="846" height="557" alt="r2" src="https://github.com/user-attachments/assets/e4652ce8-f2ec-4044-8321-707c442b5e1f" />
@@ -58,12 +60,12 @@ Because the features operate on entirely different physical scales (e.g., Temper
 
 
 
-## Future Work
+## 8. Future Work
 Future iterations of this project can expand predictive performance by incorporating advanced gradient-boosting tree architectures, such as XGBoost, LightGBM, or CatBoost, which often outperform standard decision trees on tabular datasets. Additionally, exploring complex feature engineering—such as interaction terms between ambient temperature and relative humidity ($AT \times RH$) or polynomial features—could help expose underlying thermodynamic relationships. Finally, expanding the hyperparameter grid search for the Feed-Forward Neural Network (FFNN) to include dropout regularization, batch normalization, and alternative learning rate schedulers could unlock deeper pattern recognition and further minimize prediction errors.
 
 
-## Conclusion 
+## 9. Conclusion 
 This micro-project successfully established a robust end-to-end machine learning regression pipeline to predict the Hourly Net Electrical Energy Output ($PE$) of a Combined Cycle Power Plant. Rigorous preprocessing—including duplicate handling and Interquartile Range (IQR) filtering—effectively stabilized feature variance by removing atmospheric anomalies. Statistical evaluation via Pearson correlation confirmed that Ambient Temperature ($AT$) and Exhaust Vacuum ($V$) exert dominant negative linear constraints on energy production, while Ambient Pressure ($AP$) and Relative Humidity ($RH$) exhibit positive linear trends. Among the optimized models, the non-parametric Decision Tree Regressor achieved the highest predictive performance, yielding an $R^2$ of $0.9490$ and a sharply minimized Mean Absolute Error (MAE) of $2.6597$. This outperformance over regularized linear models (Ridge, Lasso, and Elastic Net) highlights the presence of complex, non-linear thermodynamic interactions between environmental inputs and plant efficiency.
 
-## References
+## 20. References
 
